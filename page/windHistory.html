@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer=""
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <title>history</title>
+</head>
+
+<body>
+  <header class="container-fluid d-flex justify-content-evenly">
+    <h1>Kitokite</h1>
+    <a href="../index.html">Home</a>
+</header>
+
+  <main class="container-fluid d-flex justify-content-center">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Noeuds</th>
+          <th scope="col">Status for you</th>
+        </tr>
+      </thead>
+      <tbody id="content">
+        <template id="tempWeather">
+          <tr>
+            <th scope="col" id="date">Date</th>
+            <th scope="col" id="speed">Noeuds</th>
+            <th scope="col" id="direction">Status for you</th>
+          </tr>
+        </template>
+      </tbody>
+    </table>
+  </main>
+<script src="../script/showWeather.js"></script>
+</body>
+
+</html>
