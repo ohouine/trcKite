@@ -1,31 +1,34 @@
 //WEATHER AND IMAGE
 //#region 
-const formWeight = document.querySelector("#formWeight");
+const formWeight = document.querySelector("#formWeight")
 
 formWeight.addEventListener("submit", async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    const weight = formWeight.querySelector("#weight").value
-    let tips = "weight invalid"
-    if (weight > 0 && weight <= 60) {
+    const WEIGHT = formWeight.querySelector("#weight").value
+    let tips = "WEIGHT invalid"
+    if (WEIGHT > 49 && WEIGHT <= 60) {
         tips = "you need a 9m2 kite"
-    }else if (weight > 60 && weight <= 65) {
+    }else if (WEIGHT > 60 && WEIGHT <= 65) {
         tips = "you need a 9-10m2 kite"
-    }else  if (weight > 65 && weight <= 70) {
+    }else  if (WEIGHT > 65 && WEIGHT <= 70) {
         tips = "you need a 10-11m2 kite"
-    } else  if (weight > 70 && weight <= 75) {
+    } else  if (WEIGHT > 70 && WEIGHT <= 75) {
         tips = "you need a 12m2 kite"
-    }else  if (weight > 75 && weight <= 80) {
+    }else  if (WEIGHT > 75 && WEIGHT <= 80) {
         tips = "you need a 13m2 kite"
-    }else  if (weight > 80 && weight <= 90) {
+    }else  if (WEIGHT > 80 && WEIGHT <= 90) {
         tips = "you need a 14m2 kite"
-    } else  if (weight > 90) {
+    } else  if (WEIGHT > 90) {
         tips = "you need a 15m2 kite"
+    }else{
+        tips = "you saddly cannot do kit in full security with your weight"
     }
     
     document.querySelector("#infoKitsWidth").textContent = tips
     const windSpeed = await getMeteo()
-    document.querySelector("#windInfo").textContent = `wind is going at ${windSpeed.value} km/h with an angle of ${windSpeed.wind_direction}`
+    let prevent = (windSpeed.wind_direction > 40 && windSpeed.wind_direction < 266)?". Wind offshore DANGER":""
+    document.querySelector("#windInfo").textContent = `wind is going at ${windSpeed.value} km/h with an angle of ${windSpeed.wind_direction + prevent}`
 })
 
 async function getMeteo() {

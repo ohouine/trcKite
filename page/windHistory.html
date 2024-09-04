@@ -18,25 +18,34 @@
     <a href="../index.html">Home</a>
 </header>
 
-  <main class="container-fluid d-flex justify-content-center">
+  <main class="container-fluid d-flex flex-column justify-content-center">
+    <div class="d-flex">
+      <div style="height: 15px; width: 15px; background-color: red;" class="mx-3"></div>
+      <p>Wind offshore (danger)</p>
+    </div>
     <table class="table">
       <thead>
         <tr>
           <th scope="col">Date</th>
           <th scope="col">Noeuds</th>
-          <th scope="col">Status for you</th>
+          <th scope="col">direction</th>
         </tr>
       </thead>
       <tbody id="content">
-        <template id="tempWeather">
-          <tr>
-            <th scope="col" id="date">Date</th>
-            <th scope="col" id="speed">Noeuds</th>
-            <th scope="col" id="direction">Status for you</th>
-          </tr>
-        </template>
       </tbody>
+      <!-- template that goes on #content  -->
+      <template id="tempWeather">
+        <tr>
+          <th scope="col" id="date">Date</th>
+          <th scope="col" id="speed">Noeuds</th>
+          <th scope="col" id="direction">direction</th>
+        </tr>
+      </template>
     </table>
+    <div class="container-fluid d-flex justify-content-evenly mb-3">
+      <button id="btnLeft" class="btn btn-secondary"><--Left</button>
+      <button id="btnRight" class="btn btn-secondary">Right--></button>
+    </div>
   </main>
 <script src="../script/showWeather.js"></script>
 </body>
