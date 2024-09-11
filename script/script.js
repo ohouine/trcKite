@@ -42,7 +42,6 @@ async function getMeteo() {
     let response = await fetch("https://data.geo.admin.ch/ch.meteoschweiz.messwerte-windgeschwindigkeit-kmh-10min/ch.meteoschweiz.messwerte-windgeschwindigkeit-kmh-10min_en.json", init)
     let jsonResponse = await response.json()
 
-    console.log(jsonResponse.features[51].properties);
     return jsonResponse.features[51].properties
 }
 
