@@ -24,6 +24,8 @@ formWeight.addEventListener("submit", async (e) => {
     }else{
         tips = "you saddly cannot do kit in full security with your weight"
     }
+
+    localStorage.setItem("weight", WEIGHT)
     
     document.querySelector("#infoKitsWidth").textContent = tips
     const windSpeed = await getMeteo()

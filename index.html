@@ -13,7 +13,7 @@
         <a href="./page/windHistory.html">Wind history</a>
     </header>
 
-    <main class="container-fluid d-flex flex-column align-items-center mt-3">
+    <main class="container-fluid d-flex flex-column align-items-center mt-3 p-0">
         <h2>Check 4 your own</h2>
         <form id="formWeight" class="mt-3">
             <input type="number" id="weight" placeholder="Weight (kg)">
@@ -21,7 +21,9 @@
         </form>
         <p id="infoKitsWidth"></p>
         <p id="windInfo"></p>
-        <img src="./img/mascot.jpg" alt="WAIFUHHH !!" id="waifu" style="width: 80%;">
+        <div class="container-fluid d-flex justify-content-center p-0">
+            <img src="./img/mascot.jpg" alt="WAIFUHHH !!" id="waifu" style="width: 80%;">
+        </div>
     </main>
     <script src="./script/script.js"></script>
 </body>
